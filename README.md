@@ -4,8 +4,8 @@
 
 
 ## Installation
-
 Install [Vagrant][1] and its dependencies.
+
 Download vagrant-smartfox to your local directory.
 ```bash
 $ cd /path/to/local/vagrantfile
@@ -14,12 +14,14 @@ $ vagrant up
 
 
 ## Usage
-
 You can the visit the following admin URL in a browser.
+
 The default username/password is sfsadmin/sfsadmin.
 ```
 http://localhost:8080
 ```
+
+Put your SmartFox Server extension in to extensions directory.
 
 
 ## Log

@@ -9,9 +9,9 @@ if [ "$(docker ps | awk 'FNR >= 2 {print $NF}' | grep smartfox)" != "vagrant_sma
     echo 'Starting stopped vagrant_smartfox container'
     docker start vagrant_smartfox
   else
-    # If there is no stopped container name vagrant_smartfox, start a new container named vagrant_smartfox from image nickalie/smartfox.
+    # If there is no stopped container name vagrant_smartfox, start a new container named vagrant_smartfox from image timlien/docker-smartfox.
     echo 'Starting new container vagrant_smartfox'
-    docker run -d -p 8080:8080 -p 9933:9933 --name vagrant_smartfox -v /vagrant:/vagrant nickalie/smartfox
+    docker run -d -p 8080:8080 -p 9933:9933 --name vagrant_smartfox -v /vagrant/extensions:/vagrant/SmartFoxServer_2X/SFS2X/extensions timlien/docker-smartfox 
   fi
 
 fi

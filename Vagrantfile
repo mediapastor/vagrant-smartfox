@@ -25,7 +25,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "docker" do |d|
     d.pull_images "timlien/docker-smartfox"
     d.run "timlien/docker-smartfox", 
-      args: "-d -p 8080:8080 -p 9933:9933 --name vagrant_smartfox -v /vagrant:/vagrant"
+      args: "-d -p 8080:8080 -p 9933:9933 --name vagrant_smartfox -v /vagrant/extensions:/vagrant/SmartFoxServer_2X/SFS2X/extensions"
   end
 
   # Initialize docker container when boot up
