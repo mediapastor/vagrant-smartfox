@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.box_check_update = false
 
-  # Foward Saiku 8080 port
+  # Foward SmartFox 8080 9933 port
   config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.network "forwarded_port", guest: 9933, host: 9933
   config.vm.hostname="vagrant-smartfox"
@@ -21,10 +21,10 @@ Vagrant.configure(2) do |config|
       vb.cpus = 1
   end
 
-  # Provisoning with docker and image timlien/docker-saiku
+  # Provisoning with docker and image timlien/docker-smartfox
   config.vm.provision "docker" do |d|
-    d.pull_images "timlien/smartfox"
-    d.run "timlien/smartfox", 
+    d.pull_images "timlien/docker-smartfox"
+    d.run "timlien/docker-smartfox", 
       args: "-d -p 8080:8080 -p 9933:9933 --name vagrant_smartfox -v /vagrant:/vagrant"
   end
 
