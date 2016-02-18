@@ -1,8 +1,9 @@
 # exclude all files but following files
 /*
 
-!extensions/
 !Vagrantfile
 !boot.sh
 !README.md
 !.gitignor
+
+!extensions/
