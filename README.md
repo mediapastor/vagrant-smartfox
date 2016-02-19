@@ -4,7 +4,7 @@
 
 
 ## Installation
-Install [Vagrant][1] and its dependencies.
+Install [Vagrant][2] and its dependencies.
 
 Download vagrant-smartfox to your local directory.
 ```bash
@@ -21,7 +21,7 @@ The default username/password is sfsadmin/sfsadmin.
 http://localhost:8080
 ```
 
-Put your SmartFox Server extension in to extensions directory.
+Put your SmartFox Server extension into extensions directory.
 
 
 ## Log
@@ -30,7 +30,7 @@ SmartFox Server log
 ```bash
 $ cd /path/to/local/vagrantfile
 $ vagrant ssh
-$ docker exec -it vagrant_smartfox cat /vagrant/SmartFoxServer_2X/SFS2X/logs/smartfox.log
+$ docker exec -it vagrant_smartfox cat /var/SmartFoxServer_2X/SFS2X/logs/smartfox.log
 ```
 
 [1]: http://www.smartfoxserver.com/
