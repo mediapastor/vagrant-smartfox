@@ -23,14 +23,21 @@ http://localhost:8080
 
 Put your SmartFox Server extension into extensions directory.
 
+## Extension
+SmartFox Server custom extension folder
+```bash
+$ cd /path/to/local/vagrant/
+$ cd /extensions
+```
+Put your Extension.jar into the folder.
 
 ## Log
 
 SmartFox Server log
 ```bash
-$ cd /path/to/local/vagrantfile
-$ vagrant ssh
-$ docker exec -it vagrant_smartfox cat /var/SmartFoxServer_2X/SFS2X/logs/smartfox.log
+$ cd /path/to/local/vagrant/
+$ cd /logs
+$ cat smartfox.log
 ```
 
 [1]: http://www.smartfoxserver.com/
